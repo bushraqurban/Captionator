@@ -1,5 +1,5 @@
 
-# 📸 Captionator ✏️
+# 📸  Captionator  ✏️
 
 _An AI-powered tool that scrapes images from a webpage and generates captions locally for each image using the BLIP model. This project uses [Gradio](https://gradio.app/) to create an interactive web interface._
 
