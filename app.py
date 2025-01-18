@@ -77,9 +77,9 @@ def generate_captions_from_url(url):
 # Create the Gradio interface
 with gr.Blocks() as iface:
     gr.Markdown("""
-    # **Image Caption Generator**
+    # 📸 **Captionator** ✏️
 
-    Welcome to the Image Caption Generator! This app scrapes images from the URL you provide and uses advanced AI to generate captions for each image.
+    Welcome to Captionator! This app scrapes images from the URL you provide and uses advanced AI to generate captions for each image.
 
     ## How it works:
     - Paste any webpage URL that contains images (e.g., Wikipedia or blogs).
