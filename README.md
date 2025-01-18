@@ -39,11 +39,18 @@ _An AI-powered tool that scrapes images from a webpage and generates captions lo
 
 2. Create a virtual environment and activate it (optional but recommended):
 
-    ```bash
-    python3 -m venv venv # On Mac 
-    source venv/bin/activate  # On Windows
+   ```bash
+    # On Mac/Linux:
+    python3 -m venv venv
+    source venv/bin/activate
     ```
-
+    
+    ```bash
+    # On Windows
+    python -m venv venv 
+    .\venv\Scripts\activate
+    ```
+    
 3. Install the required dependencies:
 
     ```bash
