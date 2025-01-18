@@ -4,7 +4,7 @@ from io import BytesIO
 from bs4 import BeautifulSoup
 from transformers import BlipProcessor, BlipForConditionalGeneration
 import gradio as gr
-import csv  # Import csv module for writing CSV
+import csv
 
 # Load the pretrained processor and model
 processor = BlipProcessor.from_pretrained("Salesforce/blip-image-captioning-base")
