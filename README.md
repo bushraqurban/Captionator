@@ -33,8 +33,8 @@ An AI-powered tool that scrapes images from a webpage and generates captions loc
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/bushraqurban/image-caption-generator.git
-    cd image-caption-generator
+    git clone https://github.com/bushraqurban/captionator.git
+    cd captionator
     ```
 
 2. Create a virtual environment and activate it (optional but recommended):
