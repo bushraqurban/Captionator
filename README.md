@@ -1,11 +1,11 @@
 
 # Image Caption Generator
 
-An AI-powered tool that scrapes images from a webpage and generates captions for each image using the BLIP model. This project uses [Gradio](https://gradio.app/) to create an interactive web interface.
+An AI-powered tool that scrapes images from a webpage and generates captions locally for each image using the BLIP model. This project uses [Gradio](https://gradio.app/) to create an interactive web interface.
 
 ## Objective
 
-The **Image Caption Generator** is designed to help users automatically generate descriptive captions for images found on a webpage. This tool can be useful in the following contexts: 
+The **Image Caption Generator** is designed to help users automatically generate descriptive captions on their local machines for images found on a webpage. This tool can be useful in the following contexts: 
 1. **Content Creation**: Content creators, bloggers, or social media managers can use this tool to quickly generate captions for images on their websites or blogs. It saves time and adds valuable metadata to images. 
 2. **Accessibility**: The captions generated can be used to provide alt text for images, helping visually impaired users understand the content on a webpage. 
 3. **Image Dataset Creation**: Researchers and data scientists can leverage this tool to build datasets with image captions, which can be useful for training machine learning models in computer vision tasks. 
