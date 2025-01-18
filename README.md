@@ -33,7 +33,7 @@ An AI-powered tool that scrapes images from a webpage and generates captions loc
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/bushraqurban/captionator.git
+    git clone https://github.com/bushraqurban/Captionator.git
     cd captionator
     ```
 
@@ -53,7 +53,8 @@ An AI-powered tool that scrapes images from a webpage and generates captions loc
 4. Run the application:
 
     ```bash
-    python app.py
+    python3 app.py # On Mac
+    python app.py # On Windows
     ```
 
     This will launch the app in your browser.
