@@ -20,7 +20,7 @@ def generate_caption(image_url):
 
         image = image.convert('RGB')  # Ensure the image is in RGB format
 
-        inputs = processor(image, return_tensors="pt")
+        inputs = processor(image, return_tensors="pt", padding=True)
         out = model.generate(**inputs, max_new_tokens=50)
         caption = processor.decode(out[0], skip_special_tokens=True)
 
