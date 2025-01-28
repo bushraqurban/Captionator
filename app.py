@@ -1,4 +1,3 @@
-import requests
 import streamlit as st
 from image_scraper import scrape_images_from_url
 from image_captioner import generate_caption
@@ -9,10 +8,8 @@ def generate_captions_from_url(url):
     Orchestrates the scraping of images, caption generation, and saving to CSV.
     """
     img_urls = scrape_images_from_url(url)
-    
     if not img_urls:
         return None
-    
     captions = []
     for img_url in img_urls:
         try:
@@ -21,22 +18,19 @@ def generate_captions_from_url(url):
             captions.append([img_url, caption])
         except Exception as e:
             # Catch any exceptions that happen during caption generation
-            st.warning(f"Error processing image {img_url}: {str(e)}")
-    
+            st.warning(f"Error processing image {img_url}: {str(e)}")    
     if captions:
         # Save captions to CSV and return the file path
         csv_file = save_captions_to_csv(captions)
         return csv_file
-    else:
-        return None
 
 # Streamlit Interface
-st.title("📸 **Captionator** ✏️")
+st.image("assets/captionator-logo.png", width=400)
 
 st.markdown("""
-Welcome to Captionator! This app scrapes images from the URL you provide and uses advanced AI to generate captions for each image.
+_AI-Driven Captions in a Click !_
 
-## How it works:
+## How to use:
 - Paste any webpage URL that contains images (e.g., Wikipedia or blogs).
 - Click the **Generate Captions** button to generate captions.
 - After the captions are generated, download the captions file.
@@ -50,7 +44,6 @@ if st.button("Generate Captions"):
     if url:
         # Generate captions and get the CSV file
         file_path = generate_captions_from_url(url)
-        
         if file_path:
             # If file is generated, provide download button
             with open(file_path, "rb") as file:

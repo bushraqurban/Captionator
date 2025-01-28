@@ -5,7 +5,7 @@ def save_captions_to_csv(captions, filename="captions.csv"):
     Save the list of captions to a CSV file.
     """
     try:
-        with open(filename, "w", newline="") as file:
+        with open(filename, "w", newline="", encoding='utf-8') as file:
             writer = csv.writer(file)
             writer.writerow(["Image URL", "Caption"])
             writer.writerows(captions)
