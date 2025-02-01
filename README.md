@@ -102,7 +102,7 @@ This project was inspired by the [IBM AI Developer Professional Certificate](htt
 - A user-friendly interface that allows users to interact with the app directly without needing to run Python scripts.
 - An improved output format that generates captions in a CSV file with a table structure, making it more organized and user-friendly.
 
-## Technologies Used 🛠️
+## Technologies Used 
 - Python
 - BLIP Model
 - Streamlit
