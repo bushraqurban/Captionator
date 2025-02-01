@@ -1,5 +1,5 @@
 <h1 align="center">
-        <img alt="LearnStream Logo" width="200px" src="assets/logo.png">
+        <img alt="LearnStream Logo" width="400px" src="assets/logo.png">
 </h1>
 
 <div align="center">
