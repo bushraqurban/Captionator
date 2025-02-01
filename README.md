@@ -4,11 +4,12 @@
 
 <div align="center">
 
-_An AI-powered tool that scrapes images from a webpage and generates captions locally for each image using the BLIP model. This project uses Streamlit to create an interactive web interface._
-
 [![Live Website Status](https://img.shields.io/badge/Live_App-Online-brightgreen)](https://captionator.streamlit.app/)
 
 </div>
+
+_An AI-powered tool that scrapes images from a webpage and generates captions locally for each image using the BLIP model. This project uses Streamlit to create an interactive web interface._
+
 
 ![Homepage Screenshot](assets/ui-screenshot.png)
 *The main homepage where users can input a URL to scrape images from.*
