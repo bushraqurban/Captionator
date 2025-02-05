@@ -25,7 +25,7 @@ def generate_captions_from_url(url):
         return csv_file
 
 # Streamlit Interface
-st.image("assets/captionator-logo.png", width=400)
+st.image("assets/logo.png", width=400)
 
 st.markdown("""
 _AI-Driven Captions in a Click !_
