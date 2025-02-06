@@ -1,3 +1,8 @@
+"""
+This module handles the scraping of images from a URL, generating captions for
+the images, and saving the captions to a CSV file for download using Streamlit.
+"""
+
 import streamlit as st
 from image_scraper import scrape_images_from_url
 from image_captioner import generate_caption
@@ -5,7 +10,7 @@ from file_handler import save_captions_to_csv
 
 def generate_captions_from_url(url):
     """
-    Orchestrates the scraping of images, caption generation, and saving to CSV.
+    Organizes the scraping of images, caption generation, and saving to CSV.
     """
     img_urls = scrape_images_from_url(url)
     if not img_urls:
@@ -18,11 +23,12 @@ def generate_captions_from_url(url):
             captions.append([img_url, caption])
         except Exception as e:
             # Catch any exceptions that happen during caption generation
-            st.warning(f"Error processing image {img_url}: {str(e)}")    
+            st.warning(f"Error processing image {img_url}: {str(e)}")
     if captions:
         # Save captions to CSV and return the file path
         csv_file = save_captions_to_csv(captions)
         return csv_file
+    return None
 
 # Streamlit Interface
 st.image("assets/logo.png", width=400)
@@ -54,6 +60,9 @@ if st.button("Generate Captions"):
                     mime="text/csv"
                 )
         else:
-            st.error("No images or captions were generated. Please check the URL and ensure it contains images.")
+            st.error("""
+            No images or captions were generated.
+            Please check the URL and ensure it contains images,
+            or the website might not allow scraping.""")
     else:
         st.warning("Please enter a valid URL.")

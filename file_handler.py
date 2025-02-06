@@ -1,3 +1,8 @@
+"""
+This module handles saving image captions to a CSV file.
+It contains a function to save a list of captions along with their corresponding image URLs.
+"""
+
 import csv
 
 def save_captions_to_csv(captions, filename="captions.csv"):

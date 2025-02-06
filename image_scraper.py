@@ -1,3 +1,9 @@
+"""
+This module is responsible for scraping image URLs from a given webpage.
+It uses the `requests` library to fetch the webpage content
+and `BeautifulSoup` to parse and extract image URLs.
+"""
+
 from urllib.parse import urljoin
 import requests
 from bs4 import BeautifulSoup
@@ -7,7 +13,8 @@ def scrape_images_from_url(url):
     Scrape image URLs from the given webpage URL.
     """
     try:
-        response = requests.get(url)
+        response = requests.get(url, timeout=10)  # 10 seconds timeout
+        response.raise_for_status()  # Raise an exception for HTTP error responses
         soup = BeautifulSoup(response.text, 'html.parser')
         img_elements = soup.find_all('img')
         img_urls = []
@@ -22,6 +29,9 @@ def scrape_images_from_url(url):
 
         return img_urls
 
-    except Exception as e:
+    except requests.exceptions.RequestException as e:  # Catch network-related errors
+        print(f"Request error: {e}")
+    except Exception as e:  # Catch other unexpected exceptions
         print(f"Error while scraping images: {e}")
-        return []
+    return []
+    
