@@ -8,6 +8,14 @@ from image_scraper import scrape_images_from_url
 from image_captioner import generate_caption
 from file_handler import save_captions_to_csv
 
+# Add thumbnail image
+st.markdown("""
+    <meta property="og:image" content="assets/ui-screenshot.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="300" />
+    <meta property="og:image:height" content="300" />
+""", unsafe_allow_html=True)
+
 def generate_captions_from_url(url):
     """
     Organizes the scraping of images, caption generation, and saving to CSV.
