@@ -13,7 +13,7 @@ def scrape_images_from_url(url):
     Scrape image URLs from the given webpage URL.
     """
     try:
-        response = requests.get(url, timeout=10)  # 10 seconds timeout
+        response = requests.get(url, timeout=30)  # 30 seconds timeout
         response.raise_for_status()  # Raise an exception for HTTP error responses
         soup = BeautifulSoup(response.text, 'html.parser')
         img_elements = soup.find_all('img')
